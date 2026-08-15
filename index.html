@@ -1,58 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="description" content="j’adore Sourdough Bakery — bread worth waiting for.">
-  <meta name="theme-color" content="#f7f1e9">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="j'adore Sourdough Bakery — naturally fermented sourdough loaves and focaccia, made slowly with simple ingredients." />
+  <meta name="theme-color" content="#17110c" />
   <title>j’adore | Sourdough Bakery</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <main class="page" aria-label="j’adore Sourdough Bakery">
-    <div class="design" id="design">
-      <img class="design-image" src="./assets/jadore-reference.webp" alt="j’adore Sourdough Bakery — Bread worth waiting for">
+  <svg class="svg-defs" aria-hidden="true">
+    <defs>
+      <symbol id="i-bowl" viewBox="0 0 64 64"><path d="M13 29h38c-2 15-9 22-19 22S15 44 13 29Z"/><path d="M20 25c5-5 19-7 25 0M28 23c-3-7 1-10 5-14M36 23c4-5 5-9 3-13"/></symbol>
+      <symbol id="i-jar" viewBox="0 0 64 64"><path d="M22 10h20M24 15h16M21 19h22l3 6v25a5 5 0 0 1-5 5H23a5 5 0 0 1-5-5V25l3-6Z"/><path d="M23 33c7-4 12 5 19 0M23 40c6-3 12 4 19 0"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 64 64"><circle cx="32" cy="32" r="23"/><path d="M32 18v16l10 6M32 8v5M32 51v5M8 32h5M51 32h5"/></symbol>
+      <symbol id="i-hands" viewBox="0 0 64 64"><path d="M9 37c7 1 11 5 15 11 3 5 10 7 16 4l11-6c4-2 4-7 0-8-2-1-4 0-7 1l-8 3"/><path d="M55 27c-6 1-10 5-14 10l-4 5M15 34l8-8c3-3 6 0 4 3l-4 5M22 36l8-11c3-4 6-1 4 2l-5 9M31 36l5-9c2-4 6-1 4 2l-3 7"/></symbol>
+      <symbol id="i-bread" viewBox="0 0 64 64"><path d="M11 40c0-13 9-24 21-24s21 11 21 24c0 7-4 10-10 10H21c-6 0-10-3-10-10Z"/><path d="M24 24c5 2 7 5 7 9M34 22c5 3 6 6 6 10M17 31c4 1 7 4 8 8"/></symbol>
+      <symbol id="i-drop" viewBox="0 0 64 64"><path d="M32 8C23 21 17 29 17 39a15 15 0 0 0 30 0c0-10-6-18-15-31Z"/></symbol>
+      <symbol id="i-flour" viewBox="0 0 64 64"><path d="M20 14h24l-3 8 6 8-4 24H21l-4-24 6-8-3-8Z"/><path d="M23 22h18M24 35h16M27 42h10"/></symbol>
+      <symbol id="i-wheat" viewBox="0 0 64 64"><path d="M32 56V10M32 20c-8-1-11-6-10-11 7 1 10 5 10 11ZM32 28c8-1 11-6 10-11-7 1-10 5-10 11ZM32 36c-8-1-11-6-10-11 7 1 10 5 10 11ZM32 44c8-1 11-6 10-11-7 1-10 5-10 11Z"/></symbol>
+      <symbol id="i-salt" viewBox="0 0 64 64"><path d="M23 18h18l3 36H20l3-36ZM25 12h14l2 6H23l2-6Z"/><path d="M27 29h2M35 28h2M31 35h2M38 39h2M25 42h2"/></symbol>
+      <symbol id="i-olive" viewBox="0 0 64 64"><path d="M31 54c3-17 8-30 18-42M39 35c-9-1-13-5-13-11 8 0 12 4 13 11ZM43 27c8-1 12-5 12-11-7 0-11 4-12 11ZM35 45c-8-1-12-5-12-11 7 0 11 4 12 11Z"/><ellipse cx="47" cy="39" rx="5" ry="7"/><ellipse cx="27" cy="49" rx="5" ry="7"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 64 64"><path d="M12 46C13 24 28 12 52 12c-1 24-14 39-36 40"/><path d="M18 47c10-12 18-19 30-29"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 64 64"><path d="M32 52 13 34C1 22 17 9 27 19l5 5 5-5c10-10 26 3 14 15L32 52Z"/></symbol>
+      <symbol id="wheat-art" viewBox="0 0 180 360"><path d="M90 350C82 265 90 178 130 36M89 296c-48-17-66-44-62-77 40 7 59 32 62 77ZM98 251c47-18 66-48 63-79-41 7-60 33-63 79ZM105 202c-42-17-58-43-54-72 36 6 53 31 54 72ZM116 153c35-17 50-40 49-66-31 6-46 28-49 66ZM126 105c-25-15-34-33-29-53 23 6 34 23 29 53Z"/></symbol>
+    </defs>
+  </svg>
 
-      <span class="anchor home-anchor" id="home"></span>
-      <span class="anchor why-anchor" id="why"></span>
-      <span class="anchor ingredients-anchor" id="ingredients"></span>
-      <span class="anchor products-anchor" id="products"></span>
-      <span class="anchor story-anchor" id="story"></span>
-      <span class="anchor faq-anchor" id="faq"></span>
-      <span class="anchor contact-anchor" id="contact"></span>
-
-      <nav class="hotspots" aria-label="Primary navigation">
-        <a class="hotspot nav-bread" href="#products" aria-label="Our Bread"></a>
-        <a class="hotspot nav-why" href="#why" aria-label="Why Sourdough"></a>
-        <a class="hotspot nav-ingredients" href="#ingredients" aria-label="Ingredients"></a>
-        <a class="hotspot nav-story" href="#story" aria-label="Our Story"></a>
-        <a class="hotspot nav-faq" href="#faq" aria-label="FAQ"></a>
-        <a class="hotspot nav-contact" href="#contact" aria-label="Contact"></a>
-        <a class="hotspot nav-order" href="#products" aria-label="Order This Week"></a>
+  <section class="hero" id="top">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="j'adore Sourdough Bakery home">
+        <span class="brand-mark"><svg><use href="#i-wheat"></use></svg></span>
+        <span class="brand-name">j’adore</span>
+        <span class="brand-subtitle">Sourdough Bakery</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#top">Home</a>
+        <a href="#story">Our Story</a>
+        <a href="#why">Why Sourdough</a>
+        <a href="#bread">Products</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
       </nav>
+      <a class="button hero-nav-button" href="#bread">Order This Week</a>
+    </header>
 
-      <a class="hotspot hero-order" href="#products" aria-label="Order This Week"></a>
-      <a class="hotspot hero-about" href="#why" aria-label="About Our Bread"></a>
-      <a class="hotspot bake-order" href="#products" aria-label="Order Now"></a>
-      <a class="hotspot join-list" href="#contact" aria-label="Join the List"></a>
+    <div class="hero-inner page-width">
+      <div class="hero-copy">
+        <h1>Bread worth<br><em>waiting for.</em></h1>
+        <span class="tiny-rule">✣</span>
+        <p>Handcrafted sourdough. Small batches.<br>Deep flavor. Simple ingredients.<br>Made with time, care, and intention.</p>
+        <a class="button hero-button" href="#bread">Order This Week</a>
+      </div>
+      <div class="hero-visual" aria-label="Artisan sourdough loaf and focaccia">
+        <div class="focaccia-photo"></div>
+        <div class="loaf-photo"></div>
+        <div class="flour-bowl"><span></span></div>
+      </div>
     </div>
+  </section>
 
-    <section class="sr-only" aria-label="Bakery content">
-      <h1>Bread worth waiting for.</h1>
-      <p>We bake sourdough the slow way with only natural ingredients, long fermentation, and lots of care.</p>
-      <h2>Why Sourdough?</h2>
-      <p>Sourdough is fermented naturally using a wild starter and given 18 to 36 hours of slow fermentation.</p>
-      <h2>Made With Only Real Ingredients</h2>
-      <p>Kirkland Organic Flour, King Arthur Whole Wheat Flour, water, salt, and Terra Delyssa Extra Virgin Olive Oil for our focaccia.</p>
-      <h2>Our Bread</h2>
-      <p>Sourdough loaf and sourdough focaccia are available. Little baguettes and flavored loaves are coming soon.</p>
-      <h2>Why We Started</h2>
-      <p>We were looking for an alternative to store-bought bread. The ingredient lists were long and confusing, so we started baking our own with simple ingredients and patience.</p>
-      <p>Made with love by Jad and Pia.</p>
-      <h2>FAQ</h2>
-      <p>Learn about freshness, storage, baking schedule, pickup, custom orders, and natural fermentation.</p>
+  <main>
+    <section class="cream-section process-section" id="why">
+      <div class="page-width narrow-head">
+        <p class="section-kicker">Why Sourdough?</p>
+        <h2>Time is our secret ingredient.</h2>
+        <p class="section-intro">We let nature lead. Our slow fermentation process develops deep flavor, beautiful texture, and the character that comes from real, unhurried food.</p>
+      </div>
+      <div class="process-row page-width">
+        <article><div class="icon-circle"><svg><use href="#i-bowl"></use></svg></div><h3>1. Flour + Water + Salt</h3><p>Simple ingredients.<br>Nothing more.</p></article>
+        <span class="arrow">→</span>
+        <article><div class="icon-circle"><svg><use href="#i-jar"></use></svg></div><h3>2. Wild Starter</h3><p>A living culture that<br>brings our bread to life.</p></article>
+        <span class="arrow">→</span>
+        <article><div class="icon-circle"><svg><use href="#i-clock"></use></svg></div><h3>3. 18–36 Hours<br>Fermentation</h3><p>Slow fermentation develops<br>complexity and flavor.</p></article>
+        <span class="arrow">→</span>
+        <article><div class="icon-circle"><svg><use href="#i-hands"></use></svg></div><h3>4. Hand Shaped</h3><p>Each loaf shaped<br>by hand with care.</p></article>
+        <span class="arrow">→</span>
+        <article><div class="icon-circle"><svg><use href="#i-bread"></use></svg></div><h3>5. Baked Fresh</h3><p>Golden crust. Open crumb.<br>Made for you.</p></article>
+      </div>
+    </section>
+
+    <section class="cream-section ingredients-section" id="ingredients">
+      <svg class="edge-art left"><use href="#wheat-art"></use></svg>
+      <svg class="edge-art right"><use href="#wheat-art"></use></svg>
+      <div class="page-width narrow-head">
+        <p class="section-kicker">Made With</p>
+        <h2>Just a few honest ingredients.</h2>
+      </div>
+      <div class="ingredients-wrap page-width">
+        <div class="ingredient-group">
+          <p class="mini-heading">Our Sourdough Loaves</p>
+          <div class="ingredient-row four">
+            <article><svg><use href="#i-salt"></use></svg><span>Salt</span></article>
+            <article><svg><use href="#i-drop"></use></svg><span>Water</span></article>
+            <article><svg><use href="#i-flour"></use></svg><span>Kirkland<br>Organic Flour</span></article>
+            <article><svg><use href="#i-wheat"></use></svg><span>King Arthur<br>Whole Wheat<br><small>(in starter)</small></span></article>
+          </div>
+        </div>
+        <div class="ingredient-divider"></div>
+        <div class="ingredient-group">
+          <p class="mini-heading">Our Sourdough Focaccia</p>
+          <div class="ingredient-row five">
+            <article><svg><use href="#i-salt"></use></svg><span>Salt</span></article>
+            <article><svg><use href="#i-drop"></use></svg><span>Water</span></article>
+            <article><svg><use href="#i-flour"></use></svg><span>Kirkland<br>Organic Flour</span></article>
+            <article><svg><use href="#i-wheat"></use></svg><span>King Arthur<br>Whole Wheat<br><small>(in starter)</small></span></article>
+            <article><svg><use href="#i-olive"></use></svg><span>Terra Delyssa<br>Extra Virgin<br>Olive Oil</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefit-section">
+      <div class="page-width narrow-head">
+        <p class="section-kicker">Bread for You</p>
+        <h2>Better bread. Better ingredients. Better for you.</h2>
+      </div>
+      <div class="benefit-row page-width">
+        <article><svg><use href="#i-leaf"></use></svg><h3>Long Fermentation</h3><p>Time gives the dough room to ferment naturally and develop its character.</p></article>
+        <article><svg><use href="#i-bowl"></use></svg><h3>Thoughtful Process</h3><p>We use a wild starter and a slow process instead of rushing with commercial yeast.</p></article>
+        <article><svg><use href="#i-wheat"></use></svg><h3>Simple Flour</h3><p>Our bread is built around recognizable ingredients, not a long list of additives.</p></article>
+        <article><svg><use href="#i-heart"></use></svg><h3>Real Ingredients</h3><p>No preservatives or shortcuts — just the ingredients needed to make good bread.</p></article>
+        <article><svg><use href="#i-bread"></use></svg><h3>Deep Flavor</h3><p>Slow fermentation creates the rich, complex flavor that makes sourdough special.</p></article>
+      </div>
+    </section>
+
+    <section class="products-section" id="bread">
+      <div class="page-width narrow-head">
+        <p class="section-kicker">Our Weekly Bakes</p>
+        <h2>Made weekly. Loved deeply.</h2>
+      </div>
+      <div class="products-grid page-width">
+        <article class="product-card photo-product">
+          <div class="product-photo loaf-product" role="img" aria-label="Rustic sourdough loaf"></div>
+          <div class="product-copy"><h3>Sourdough<br>Loaves</h3><p class="product-tagline">Classic. Pure. Timeless.</p><p>Our classic sourdough loaves are slow-fermented for depth, then baked with care for a crisp crust and open crumb.</p><a class="product-button" href="#contact">Order This Week</a></div>
+        </article>
+        <article class="product-card photo-product">
+          <div class="product-photo focaccia-product" role="img" aria-label="Rosemary sourdough focaccia"></div>
+          <div class="product-copy"><h3>Sourdough<br>Focaccia</h3><p class="product-tagline">Crispy edges. Soft inside.</p><p>Our sourdough focaccia is fermented for flavor and finished with Terra Delyssa extra virgin olive oil.</p><a class="product-button" href="#contact">Order This Week</a></div>
+        </article>
+        <article class="product-card coming-product">
+          <div class="line-drawing baguette-drawing"><span></span><i></i><i></i><i></i></div>
+          <div class="product-copy"><h3>Little<br>Baguettes</h3><p>Crisp crust. Light and airy. Perfect for everyday meals.</p><span class="coming-button">Coming Soon</span></div>
+        </article>
+        <article class="product-card coming-product">
+          <div class="line-drawing flavored-drawing"><span></span><i></i><i></i><i></i></div>
+          <div class="product-copy"><h3>Flavored<br>Loaves</h3><p>Thoughtful seasonal flavors, made with real ingredients and our sourdough base.</p><span class="coming-button">Coming Soon</span></div>
+        </article>
+      </div>
+      <p class="small-batch-note">♡ &nbsp; Small batches. Big flavor. Limited quantities each week.</p>
+    </section>
+
+    <section class="story-faq-section" id="story">
+      <svg class="edge-art story-left"><use href="#wheat-art"></use></svg>
+      <svg class="edge-art story-right"><use href="#wheat-art"></use></svg>
+      <div class="page-width story-faq-grid">
+        <article class="story-block">
+          <p class="section-kicker">Our Story</p>
+          <h2>Why We Started</h2>
+          <p>We were trying to find an alternative to store-bought bread.</p>
+          <p>Too many ingredients didn’t feel right. The labels were long, and we wanted something simpler — something we actually felt good bringing home.</p>
+          <p>So we began making sourdough with simple, honest ingredients and a slower process. What started in our kitchen is now something we’re proud to share with our community.</p>
+          <p>Thank you for supporting small, local, and real.</p>
+          <div class="signature">— jad and pia <span>♡</span></div>
+        </article>
+        <div class="vertical-rule"></div>
+        <section class="faq-block" id="faq">
+          <h2>FAQ</h2>
+          <div class="faq-list">
+            <details><summary>What makes sourdough different?</summary><p>Our bread is naturally leavened with a living starter and fermented slowly instead of being rushed with commercial yeast.</p></details>
+            <details><summary>Where do you bake?</summary><p>We bake in small batches locally. Pickup and ordering details will be posted here as we finalize them.</p></details>
+            <details><summary>How should I store my bread?</summary><p>Keep it at room temperature for short-term storage. For longer storage, slice and freeze it, then toast or warm slices as needed.</p></details>
+            <details><summary>Do you offer focaccia every week?</summary><p>Focaccia is part of our current menu, but quantities are limited and weekly availability may vary.</p></details>
+            <details><summary>How can I place an order?</summary><p>Online ordering details are coming soon. This site will be updated when the ordering process is ready.</p></details>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="page-width contact-grid">
+        <div class="contact-copy"><p class="section-kicker">Let’s Connect</p><h2>We’d love to hear from you.</h2><p>Have a question, special request, or just want to say hello? Ordering and contact details are coming soon.</p><span class="tiny-rule">✣</span></div>
+        <div class="contact-placeholder"><span>j’adore</span><strong>Ordering details coming soon.</strong><p>For now, check back here for weekly bake availability and updates.</p></div>
+        <div class="contact-info"><p class="mini-heading">Bakery Notes</p><p>Small-batch sourdough</p><p>Local pickup</p><p>Loaves + focaccia available now</p><p>Little baguettes + flavored loaves coming soon</p></div>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <div>Handcrafted sourdough. Small batches. Big heart.</div>
+    <div class="footer-wheat"><svg><use href="#i-wheat"></use></svg></div>
+    <div>© <span id="year"></span> j’adore Sourdough Bakery</div>
+  </footer>
+
   <script src="./script.js"></script>
 </body>
 </html>
