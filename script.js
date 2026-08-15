@@ -1,32 +1,31 @@
-const image=document.getElementById('reference-image');
-const loader=document.getElementById('design-loader');
-const parts=['./assets/reference-01.txt','./assets/reference-02.txt','./assets/reference-03.txt','./assets/reference-04.txt'];
+const menuToggle=document.querySelector('.menu-toggle');
+const nav=document.querySelector('.nav');
+if(menuToggle&&nav){
+  menuToggle.addEventListener('click',()=>{
+    const open=nav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded',String(open));
+  });
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    nav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded','false');
+  }));
+}
 
-async function loadReference(){
+const year=document.getElementById('year');
+if(year)year.textContent=new Date().getFullYear();
+
+const referenceParts=['./assets/reference-01.txt','./assets/reference-02.txt','./assets/reference-03.txt','./assets/reference-04.txt'];
+async function loadReferenceCrops(){
   try{
-    const encoded=await Promise.all(parts.map(async path=>{
+    const parts=await Promise.all(referenceParts.map(async path=>{
       const response=await fetch(path,{cache:'force-cache'});
       if(!response.ok)throw new Error(`Could not load ${path}`);
       return response.text();
     }));
-    image.addEventListener('load',()=>{
-      image.classList.add('loaded');
-      loader?.classList.add('hidden');
-    },{once:true});
-    image.src='data:image/avif;base64,'+encoded.join('').replace(/\s+/g,'');
+    const source='data:image/avif;base64,'+parts.join('').replace(/\s+/g,'');
+    document.querySelectorAll('.reference-source').forEach(img=>{img.src=source;});
   }catch(error){
-    console.error(error);
-    document.body.classList.add('load-error');
+    console.error('Reference crop load failed',error);
   }
 }
-
-for(const link of document.querySelectorAll('a[href^="#"]')){
-  link.addEventListener('click',event=>{
-    const target=document.querySelector(link.getAttribute('href'));
-    if(!target)return;
-    event.preventDefault();
-    target.scrollIntoView({behavior:'smooth',block:'start'});
-  });
-}
-
-loadReference();
+loadReferenceCrops();
