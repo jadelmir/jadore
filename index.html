@@ -8,16 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top"><span class="brand-name">j’adore</span><span class="brand-subtitle">Sourdough Bakery</span></a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     <nav class="nav">
-      <a href="#bread">Our Bread</a><a href="#why">Why Sourdough</a><a href="#ingredients">Ingredients</a><a href="#story">Our Story</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+      <a href="#bread">Our Bread</a><a href="#why">Why Sourdough</a><a href="#ingredients">Ingredients</a><a href="#story">Our Story</a><a href="#faq">FAQ</a>
     </nav>
-    <a class="button button-dark header-cta" href="#bread">Order This Week</a>
+    <a class="button button-dark header-cta" href="#bread">Our Bread</a>
   </header>
 
   <main id="top">
@@ -26,7 +26,7 @@
         <p class="eyebrow">Small batch · naturally fermented</p>
         <h1>Bread worth <em>waiting for.</em></h1>
         <p class="hero-lead">We bake sourdough the slow way — with simple ingredients, long fermentation, and lots of care.</p>
-        <div class="hero-actions"><a class="button button-dark" href="#bread">Order This Week</a><a class="button button-light" href="#why">About Our Bread</a></div>
+        <div class="hero-actions"><a class="button button-dark" href="#bread">See Our Bread</a><a class="button button-light" href="#why">About Our Bread</a></div>
         <div class="hero-points">
           <div><strong>Simple Ingredients</strong><small>No preservatives. No shortcuts.</small></div>
           <div><strong>Long Fermentation</strong><small>18–36 hours for flavor and character.</small></div>
@@ -36,8 +36,8 @@
       <aside class="weekly-card">
         <p class="eyebrow">Fresh from the oven</p><h2>This Week’s Bake</h2><p>Freshly baked in limited quantities.</p>
         <ul><li>✓ Sourdough Loaf</li><li>✓ Sourdough Focaccia</li></ul>
-        <a class="button button-dark button-full" href="#contact">Order Now</a>
-        <p class="pickup-note"><strong>Local pickup</strong><br><small>Pickup details provided with your order.</small></p>
+        <a class="button button-dark button-full" href="#bread">See Our Bread</a>
+        <p class="pickup-note"><strong>Local pickup</strong><br><small>Ordering details coming soon.</small></p>
       </aside>
     </section>
 
@@ -69,8 +69,8 @@
     <section class="section-large bread-section" id="bread">
       <div class="section-heading"><p class="eyebrow">Our Weekly Bakes</p><h2>Made weekly. Loved deeply.</h2><p>Our menu is small on purpose. We focus on doing a few things beautifully.</p></div>
       <div class="product-grid current-products">
-        <article class="product-card"><div class="product-art loaf-art"><span></span></div><div class="product-copy"><p class="eyebrow">Available now</p><h3>Sourdough Loaf</h3><p>Crisp crust, open crumb, and deep flavor from a long, patient fermentation.</p><a href="#contact">Order this week →</a></div></article>
-        <article class="product-card"><div class="product-art focaccia-art"><span></span></div><div class="product-copy"><p class="eyebrow">Available now</p><h3>Sourdough Focaccia</h3><p>Soft, airy, and full of flavor, finished with Terra Delyssa extra virgin olive oil.</p><a href="#contact">Order this week →</a></div></article>
+        <article class="product-card"><div class="product-art loaf-art"><span></span></div><div class="product-copy"><p class="eyebrow">Available now</p><h3>Sourdough Loaf</h3><p>Crisp crust, open crumb, and deep flavor from a long, patient fermentation.</p></div></article>
+        <article class="product-card"><div class="product-art focaccia-art"><span></span></div><div class="product-copy"><p class="eyebrow">Available now</p><h3>Sourdough Focaccia</h3><p>Soft, airy, and full of flavor, finished with Terra Delyssa extra virgin olive oil.</p></div></article>
       </div>
       <div class="coming-heading"><p class="eyebrow">Coming Soon</p><h2>More handmade goodness on the way.</h2></div>
       <div class="product-grid coming-products">
@@ -92,21 +92,12 @@
         <details><summary>How should I store my bread?</summary><p>Avoid the refrigerator. Keep it at room temperature for short-term storage or freeze slices for later.</p></details>
         <details><summary>Do you use commercial yeast?</summary><p>No. Our sourdough is naturally leavened with our starter and given plenty of time to ferment.</p></details>
         <details><summary>Do you offer focaccia every week?</summary><p>Our current menu includes sourdough loaves and sourdough focaccia. Availability can vary by weekly batch.</p></details>
-        <details><summary>How can I place an order?</summary><p>Use the contact section below to reach out. We’ll confirm availability and pickup details with you.</p></details>
+        <details><summary>How can I place an order?</summary><p>Online ordering is coming soon. For now, this site is our bakery home and menu preview.</p></details>
       </div>
-    </section>
-
-    <section class="section-large contact-section" id="contact">
-      <div><p class="eyebrow">Let’s Stay Connected</p><h2>Fresh bread, from our kitchen to yours.</h2><p>Want to order this week, ask a question, or hear about the next bake? Send us a message.</p></div>
-      <form class="contact-form" onsubmit="return handleContact(event)">
-        <div class="form-row"><label>Name<input name="name" required placeholder="Your name"></label><label>Email<input type="email" name="email" required placeholder="you@example.com"></label></div>
-        <label>Message<textarea name="message" rows="5" required placeholder="I’d love to order..."></textarea></label>
-        <button class="button button-dark" type="submit">Send Message</button><p class="form-note" id="form-note" aria-live="polite"></p>
-      </form>
     </section>
   </main>
 
   <footer><a class="brand footer-brand" href="#top"><span class="brand-name">j’adore</span><span class="brand-subtitle">Sourdough Bakery</span></a><p>Handcrafted sourdough · small batches · real ingredients</p><p>© <span id="year"></span> j’adore Sourdough Bakery</p></footer>
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
