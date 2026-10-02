@@ -16,12 +16,14 @@ if(toggle&&nav){
 const breadImages=[
   './assets/bread/sourdough-loaf-vintage.svg',
   './assets/bread/focaccia-vintage.svg',
+  './assets/bread/pita-vintage.svg',
   './assets/bread/baguettes-vintage.svg',
   './assets/bread/flavored-loaf-vintage.svg'
 ];
 const breadLabels=[
   'Vintage illustration of a sourdough loaf',
   'Vintage illustration of sourdough focaccia',
+  'Vintage illustration of sourdough pita',
   'Vintage illustration of little baguettes',
   'Vintage illustration of flavored sourdough loaf'
 ];
