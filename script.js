@@ -46,5 +46,9 @@ if(breadArts.length){
   });
 }
 
+const oilFixStyle=document.createElement('style');
+oilFixStyle.textContent='.oil-card>svg{justify-self:center;}';
+document.head.appendChild(oilFixStyle);
+
 const year=document.getElementById('year');
 if(year) year.textContent=new Date().getFullYear();
