@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180">
-  <rect width="240" height="180" rx="18" fill="#f3eadc"/>
-  <g fill="#d6a96c" stroke="#8d653b" stroke-width="3">
-    <ellipse cx="120" cy="94" rx="82" ry="47" transform="rotate(-8 120 94)"/>
-    <ellipse cx="88" cy="77" rx="54" ry="31" transform="rotate(18 88 77)"/>
-    <ellipse cx="158" cy="111" rx="55" ry="31" transform="rotate(12 158 111)"/>
-  </g>
-  <g fill="none" stroke="#a87943" stroke-width="4" stroke-linecap="round" opacity=".8">
-    <path d="M75 72c10-5 20-4 29 3M108 103c13-8 27-9 41-1M144 83c10-5 20-4 29 3M80 116c10-5 21-5 31 1"/>
-  </g>
-  <g fill="#6f4d2e" opacity=".55">
-    <circle cx="65" cy="87" r="2.5"/><circle cx="96" cy="62" r="2.5"/><circle cx="132" cy="118" r="2.5"/><circle cx="176" cy="102" r="2.5"/><circle cx="151" cy="67" r="2.5"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-label="Vintage engraved sourdough pita"><g fill="none" stroke="#8a4f22" stroke-linecap="round" stroke-linejoin="round"><path fill="#f7ead7" stroke-width="3" d="M48 113c0-35 30-61 72-61s72 26 72 61c0 18-11 28-30 28H78c-19 0-30-10-30-28Z"/><path fill="#f7ead7" stroke-width="3" d="M61 96c0-27 25-48 59-48s59 21 59 48c0 14-9 22-25 22H86c-16 0-25-8-25-22Z"/><path stroke-width="1.6" d="M69 91c17 6 43 8 71 5 13-1 25-4 37-9M67 108c22 6 51 7 76 3 12-2 22-4 30-8"/><path stroke-width="1.2" d="M79 70c9-7 19-10 29-11M111 58c10 1 20 5 28 11M143 67c9 4 15 10 20 17"/><path stroke-width="1" d="M73 119c12-3 23-3 34 0M124 122c15-4 29-3 43 1"/></g></svg>
